@@ -31,6 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Container(
       color: Color(0xff02a67e),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.max,
         children: [
           Image.asset(

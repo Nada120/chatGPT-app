@@ -97,7 +97,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   SizedBox(
-                    width: MediaQuery.of(context).size.width - 60,
+                    width: MediaQuery.of(context).size.width*0.83,
                     child: TextField(
                       focusNode: focusNode,
                       style: const TextStyle(color: Colors.white),
@@ -114,16 +114,18 @@ class _ChatScreenState extends State<ChatScreen> {
                       ),
                     ),
                   ),
-                  IconButton(
-                    onPressed: () async {
-                      await sendMessageFCT(
-                        modelsProvider: modelsProvider, 
-                        chatProvider: chatProvider,
-                      );
-                    },
-                    icon: const Icon(
-                      Icons.send,
-                      color: Colors.white,
+                  FittedBox(
+                    child: IconButton(
+                      onPressed: () async {
+                        await sendMessageFCT(
+                          modelsProvider: modelsProvider, 
+                          chatProvider: chatProvider,
+                        );
+                      },
+                      icon: const Icon(
+                        Icons.send,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ],
